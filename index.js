@@ -11,13 +11,14 @@ async function main() {
 main();
 
 function showUserPost(user) {
+    localSorage.setItem("id", id);
     window.location.href = `${window.location.origin}/user.html`
 }
 
 // how to route to a new page in vanilla java script window.location.href
 
 function userHTML(user) {
-    return `<div class="user-card" onclick="showUserPost(user)">
+    return `<div class="user-card" onclick="showUserPost(${user.id})">
             <div class="user-card__container">
                 <h3>${user.name}</h4>
                     <p><b>Email:</b> ${user.email}</p>
