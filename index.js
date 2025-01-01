@@ -10,8 +10,8 @@ async function main() {
 
 main();
 
-function showUserPost(user) {
-    localSorage.setItem("id", id);
+function showUserPost(id) {
+    localStorage.setItem("id", id);
     window.location.href = `${window.location.origin}/user.html`
 }
 
